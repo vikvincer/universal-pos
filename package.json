@@ -1,0 +1,32 @@
+{
+  "name": "univ-pos",
+  "version": "1.0.0",
+  "description": "Universal POS system",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./index.ts",
+    "build": "tsc",
+    "dev-electron": "npm run build && electron ./dist/index.js",
+    "createdb": "sqlite3 database.db"
+  },
+  "author": "Vik Vince Ridon",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@trpc/server": "^10.16.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "electron": "^23.1.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "sqlite3": "^5.1.6",
+    "trpc": "^0.11.3",
+    "zod": "^3.21.4"
+  }
+}
