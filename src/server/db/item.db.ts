@@ -15,15 +15,18 @@ export const addItem = async (item: ItemModel) => {
 }
 
 export const addCategory = async (category: CategoryModel) => {
-    const query = `INSERT INTO CATEGORIES (name, description) VALUES (?, ?)`;
-    const values = [category.name, category.description];
+    const query = `INSERT INTO CATEGORIES (name, description, image) VALUES (?, ?, ?)`;
+    const values = [category.name, category.description, category.image];
+ 
     try {
-        await insertQuery(query, values);
-        return { success: true };
+        await db.run(query, values);
+        return { success: true }
     } catch (error) {
-       return { error };
+        return { error }
     }
 }
+
+
 
 export const createCategoryTable = () => {
     const createItemTableQuery = `

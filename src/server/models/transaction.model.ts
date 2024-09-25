@@ -18,6 +18,3 @@ export const TransactionItemSchema = z.object({
 });
 
 export type TransactionItemModel = z.infer<typeof TransactionItemSchema>;
-
-
-  

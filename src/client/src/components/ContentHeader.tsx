@@ -18,7 +18,7 @@ const ContentHeader: React.FC<ContentHeaderProps> = ({ contentHeaderProps }) => 
         return (
             <>
                 <React.Fragment key={index}>
-                    <Link className="content-header__history-link" to={`${item.link}`} onClick={item.event}>{item.title}</Link>
+                    <Link key={`link-${index}`} className="content-header__history-link" to={`${item.link}`} onClick={item.event}>{item.title}</Link>
                 </React.Fragment>
             </>
         );

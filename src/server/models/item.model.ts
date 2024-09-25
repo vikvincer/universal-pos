@@ -13,7 +13,8 @@ export const ItemSchema = z.object({
 
 export const CategorySchema = z.object({
     name: z.string(),
-    description: z.string().nullable()
+    description: z.string().nullable(),
+    image: z.any().nullable().optional(),
 })
 
 export type CategoryModel = z.infer<typeof CategorySchema>;
